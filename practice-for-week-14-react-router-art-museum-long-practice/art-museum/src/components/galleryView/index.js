@@ -1,13 +1,18 @@
 import {useParams, Route, Switch} from 'react-router-dom'
-
+import ArtImageTile from '../ArtImageTile/ArtImageTile';
 const GalleryView = ({galleries}) => {
     const {galleryId} = useParams()
-    console.log('id',galleryId)
     const galleryChoice = galleries.find((gallery) => gallery.id === +galleryId)
-    console.log(galleryChoice)
+
+
     return (
         <div>
         <h2>{galleryChoice.name}</h2>
+        <div>
+        <Route exact path='/galleries/:galleryId'>
+
+        </Route>
+        </div>
         </div>
     )
 }
