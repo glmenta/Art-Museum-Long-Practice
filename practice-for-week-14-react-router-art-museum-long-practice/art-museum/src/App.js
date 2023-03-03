@@ -1,6 +1,13 @@
+import GalleryNavigation from "./components/galleryNavigation";
+import {Route, Switch} from 'react-router-dom';
+import harvardArt from "./data/harvardArt";
+
 function App() {
+  // console.log(harvardArt.records)
   return (
-    <h1>Hello from App</h1>
+
+      <GalleryNavigation galleries={harvardArt.records}/>
+
   );
 }
 
